@@ -1,6 +1,6 @@
 "use client"
 import Image from 'next/image';
-import linkedin from '../../public/linkedin.svg';
+import linkedin from '../../public/LinkedIn.svg';
 import instragram from '../../public/instagram.svg';
 import { useState } from 'react';
 import Link from 'next/link';

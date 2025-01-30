@@ -3,7 +3,7 @@ import Image from "next/image";
 import profilepic from '../../public/Profilepic.jpeg';
 import TailwindCSS from '../../public/TailwindCSS.svg';
 import Figma from '../../public/Figma.svg';
-import next from '../../public/next.js.svg';
+import next from '../../public/Next.js.svg';
 import MySQL from '../../public/MySQL.svg';
 
 const Sec1 = () => {
