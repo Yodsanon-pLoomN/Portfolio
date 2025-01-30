@@ -9,7 +9,6 @@ const ibmPlexMono = IBM_Plex_Mono({
   subsets: ["latin"]
 });
 
-
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
