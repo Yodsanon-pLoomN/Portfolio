@@ -1,7 +1,6 @@
 
 import Image from "next/image";
 import profilepic from '../../public/Profilepic.jpeg';
-import Clientslogos from '../../public/Clients logos.svg';
 import TailwindCSS from '../../public/TailwindCSS.svg';
 import Figma from '../../public/Figma.svg';
 import next from '../../public/next.js.svg';
