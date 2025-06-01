@@ -7,9 +7,6 @@ export default function Home() {
     <>
       <Navbar />
       <Sec1 />
-
-
-
       <Sec2 />
       
     </>
