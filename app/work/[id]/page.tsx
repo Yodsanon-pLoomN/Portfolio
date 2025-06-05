@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-export default async function Page({ params }: { params: { id: string } }) {
+export default async function Page({params}: {params: Promise<{ id: string }>}) {
   const { id } = await params;
   return (
     <div className="bg-[#1B1B1B] min-h-screen container mx-auto pt-1 mt-3">
@@ -9,13 +9,16 @@ export default async function Page({ params }: { params: { id: string } }) {
         </div>
 
 
+    
     <div className="flex flex-wrap gap-20 m-10 justify-center">
         <Image
           src="/assets/1.png"
           alt="Profile picture"
-          width={800}
           height={400}
+          width={400}
         />
+    
+
     </div>
 
       <div className="flex flex-wrap gap-20 m-10 justify-center">
