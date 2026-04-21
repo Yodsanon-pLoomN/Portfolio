@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from 'next/link';
 import { useI18n } from "@/contexts/I18nContext";
 import { projects } from "@/data/projects";
@@ -21,10 +22,22 @@ export default function Projects() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {projects.map((item) => (
             <Link 
-              href={`/work/${item.id}`} 
+              href={`/project/${item.id}`} 
               key={item.id}
               className="group relative h-80 rounded-2xl overflow-hidden bg-[#fafafa] border border-black/10 transition-all duration-150 hover:shadow-md hover:shadow-black/10 flex flex-col justify-end p-8"
             >
+              {item.images?.[0] ? (
+                <div className="absolute inset-0 z-0">
+                  <Image
+                    src={item.images[0]}
+                    alt={`${item.title[locale]} preview`}
+                    fill
+                    sizes="(min-width: 1024px) 30vw, (min-width: 768px) 45vw, 100vw"
+                    className="object-cover opacity-90 group-hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+              ) : null}
+
               {/* Dynamic Background Gradient on Hover */}
               <div className="absolute inset-0 bg-linear-to-t from-white/95 via-white/70 to-transparent z-10"></div>
               <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-5 transition-opacity duration-150 z-0"></div>

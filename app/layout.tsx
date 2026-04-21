@@ -33,8 +33,8 @@ async function getInitialLocale(): Promise<Locale> {
 }
 
 export const metadata: Metadata = {
-  title: "YodsanonDK",
-  description: "YodsanonDK's personal website",
+  title: "Yodsanon Duangkhai",
+  description: "Yodsanon Duangkhai's portfolio website",
 };
 
 export default async function RootLayout({

@@ -3,7 +3,7 @@ import Image from 'next/image';
 import linkedin from '../public/LinkedIn.svg';
 import instragram from '../public/instagram.svg';
 import github from '../public/Github.svg';
-import Logo from '../public/globe.svg';
+import Logo from '../public/Logo.svg';
 import { useState } from 'react';
 import Link from 'next/link';
 import { useI18n } from '@/contexts/I18nContext';
@@ -20,11 +20,11 @@ export default function Navbar() {
           <Image
             src={Logo}
             alt="Logo"
-            width={24}
-            height={24}
+            width={30}
+            height={30}
             className="group-hover:rotate-12 transition-transform duration-300"
           />
-          <span className="text-[#111111] font-bold tracking-wider opacity-0 group-hover:opacity-100 transition-opacity duration-300 hidden sm:block">PORTFOLIO</span>
+          <span className="text-[#111111] font-bold tracking-wider opacity-0 group-hover:opacity-100 transition-opacity duration-300 hidden sm:block">YODSANON DUANGKHAI</span>
         </Link>
 
         {/* Desktop Menu */}
@@ -63,7 +63,7 @@ export default function Navbar() {
             <a href='https://www.instagram.com/yod_non/' target="_blank" rel="noopener noreferrer" className="hover:-translate-y-1 hover:scale-110 transition-all duration-300">
               <Image src={instragram} alt="Instagram" width={22} height={22} />
             </a>
-             <a href='https://github.com/Yodsanon-pLoomN' target="_blank" rel="noopener noreferrer" className="hover:-translate-y-1 hover:scale-110 transition-all duration-300">
+             <a href='https://github.com/Yodsanon-pLoomN' target="_blank" rel="noopener noreferrer" className="hover:-translate-y-1 hover:scale-110 transition-all duration-300 opacity-75" >
               <Image src={github} alt="GitHub" width={22} height={22} />
             </a>
           </div>
@@ -86,7 +86,7 @@ export default function Navbar() {
       </div>
 
       {/* Mobile menu dropdown */}
-      <div className={`md:hidden absolute w-full bg-white/95 backdrop-blur-xl border-b border-black/10 transition-all duration-300 ease-in-out overflow-hidden ${isMenuOpen ? 'max-h-75 py-4' : 'max-h-0 py-0'}`}>
+      <div className={`md:hidden absolute w-full bg-white/95 backdrop-blur-xl border-b border-black/10 transition-all duration-300 ease-in-out overflow-hidden ${isMenuOpen ? 'max-h-90 py-4' : 'max-h-0 py-0'}`}>
         <ul className="flex flex-col items-center gap-6 text-[#4b5563] font-medium">
           <li><Link href="#top" scroll={true} onClick={() => setIsMenuOpen(false)} className="hover:text-[#111111] transition-colors">{t.nav.home}</Link></li>
           <li><Link href="#skills" scroll={true} onClick={() => setIsMenuOpen(false)} className="hover:text-[#111111] transition-colors">{t.nav.skills}</Link></li>
@@ -113,11 +113,14 @@ export default function Navbar() {
           </div>
           
           <div className="flex gap-6 mt-2 pt-4 border-t border-black/10 w-1/2 justify-center">
-            <a href='https://www.linkedin.com/in/loom-pl-173a8a314/' target="_blank" rel="noopener noreferrer">
-              <Image src={linkedin} alt="LinkedIn" width={20} height={20} />
+            <a href='https://www.linkedin.com/in/loom-pl-173a8a314/' target="_blank" rel="noopener noreferrer" className='opacity-75'>
+              <Image src={linkedin} alt="LinkedIn" width={24} height={24} />
             </a>
             <a href='https://www.instagram.com/yod_non/' target="_blank" rel="noopener noreferrer">
               <Image src={instragram} alt="Instagram" width={24} height={24} />
+            </a>
+            <a href='https://github.com/Yodsanon-pLoomN' target="_blank" rel="noopener noreferrer" className='opacity-75'>
+              <Image src={github} alt="GitHub" width={24} height={24} />
             </a>
           </div>
         </ul>
