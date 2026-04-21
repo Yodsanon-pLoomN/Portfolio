@@ -24,36 +24,34 @@ export default function Projects() {
             <Link 
               href={`/project/${item.id}`} 
               key={item.id}
-              // เปิดให้ hover ทำงานทุกขนาดหน้าจอ เอานิ้วจิ้มแล้วเลื่อนจะขยายค้างไว้
-              className="group relative h-112.5 rounded-2xl overflow-hidden bg-[#fafafa] border border-black/10 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-black/10 flex flex-col z-10 hover:z-20"
+              className="group relative h-112.5 rounded-2xl overflow-hidden bg-[#fafafa] border border-black/10 transition-all duration-150 hover:scale-105 hover:shadow-xl hover:shadow-black/10 flex flex-col z-10 hover:z-20"
             >
               
-              <div className="relative h-1/2 w-full overflow-hidden bg-black/5 z-0">
+              <div className="relative h-1/2 w-full overflow-hidden bg-black/5 z-0 ">
                 {item.images?.[0] ? (
                   <Image
                     src={item.images[0]}
                     alt={`${item.title[locale]} preview`}
                     fill
                     sizes="(min-width: 1024px) 30vw, (min-width: 768px) 45vw, 100vw"
-                    className="object-cover opacity-90 transition-transform duration-500 group-hover:scale-105"
+                    className="object-cover opacity-90"
                   />
                 ) : null}
-                <div className="absolute top-0 right-0 w-32 h-32 bg-black/4 rounded-full blur-2xl -translate-y-1/2 translate-x-1/2 transition-colors duration-150 group-hover:bg-black/10"></div>
+                <div className="absolute top-0 right-0 w-32 h-32 bg-black/4 rounded-full blur-2xl -translate-y-1/2 translate-x-1/2 group-hover:bg-black/10 transition-colors duration-150"></div>
               </div>
 
               <div className="relative h-1/2 w-full p-8 flex flex-col justify-end z-20 bg-white">
                 <div className="absolute inset-0 bg-linear-to-t from-white/95 via-white/70 to-transparent z-10"></div>
-                <div className="absolute inset-0 bg-black opacity-0 transition-opacity duration-150 z-0 group-hover:opacity-5"></div>
+                <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-5 transition-opacity duration-150 z-0"></div>
 
-                {/* ซ่อนข้อความไว้แต่แรก (opacity-0, translate-y-2) แล้วค่อยโชว์ตอนมีคนเอานิ้วไปโดน (group-hover:opacity-100) */}
-                <div className="relative z-20 transform translate-y-2 opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100">
-                  <span className="text-black font-mono text-sm mb-2 block">{t.projects.itemPrefix} 0{item.id}</span>
+                <div className="relative z-20 transform translate-y-2 group-hover:translate-y-0 transition-transform duration-150">
+                  <span className="text-black font-mono text-sm mb-2 block opacity-0 group-hover:opacity-100 transition-opacity duration-150">{t.projects.itemPrefix} 0{item.id}</span>
                   <h3 className="text-2xl font-bold text-[#111111] mb-2">{item.title[locale]}</h3>
-                  <p className="text-[#4b5563] transition-colors duration-150 group-hover:text-[#1f2937] line-clamp-2">{item.desc[locale]}</p>
+                  <p className="text-[#4b5563] group-hover:text-[#1f2937] transition-colors duration-150">{item.desc[locale]}</p>
                   
-                  <div className="mt-6 flex items-center gap-2 text-black">
+                  <div className="mt-6 flex items-center gap-2 text-black opacity-0 group-hover:opacity-100 transition-opacity duration-150">
                     <span className="text-sm font-medium">{t.projects.viewProject}</span>
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 transform transition-transform duration-300 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                       <path strokeLinecap="round" strokeLinejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
                     </svg>
                   </div>

@@ -34,7 +34,7 @@ export default function ProjectDetailPage({ params }: Props) {
             href="/#projects"
             className="inline-flex items-center rounded-md border border-black px-4 py-2 text-sm font-medium hover:bg-black hover:text-white transition-colors"
           >
-            {locale === "th" ? "กลับไปดูโปรเจกต์ทั้งหมด" : "Back to all projects"}
+            {locale === "th" ? "กลับ" : "Back"}
           </Link>
         </div>
       </main>
@@ -42,7 +42,7 @@ export default function ProjectDetailPage({ params }: Props) {
   }
 
   return (
-    <main className="min-h-screen bg-white pt-28 pb-16 px-6 selection:bg-black selection:text-white">
+    <main className="min-h-screen bg-[#fafafa] pt-28 pb-16 px-6 selection:bg-black selection:text-white">
       <div className="container mx-auto max-w-4xl">
         {/* Back Link */}
         <Link
@@ -50,11 +50,11 @@ export default function ProjectDetailPage({ params }: Props) {
           className="inline-flex items-center gap-2 text-sm font-medium text-[#374151] hover:text-black mb-8 transition-colors"
         >
           <span aria-hidden>←</span>
-          {locale === "th" ? "กลับไปหน้าโปรเจกต์" : "Back to projects"}
+          {locale === "th" ? "กลับ" : "Back"}
         </Link>
 
         {/* Main Content Card */}
-        <section className="relative overflow-hidden rounded-2xl border border-black/10 bg-[#fafafa] p-7 md:p-10 shadow-sm shadow-black/5">
+        <section className="relative overflow-hidden rounded-2xl border border-black/10 bg-white p-7 md:p-10 shadow-sm shadow-black/5">
           <div className="absolute top-0 right-0 h-48 w-48 rounded-full bg-black/5 blur-3xl -translate-y-1/2 translate-x-1/2" />
 
           <div className="relative z-10">

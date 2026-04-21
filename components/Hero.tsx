@@ -50,7 +50,7 @@ export default function Hero() {
                   alt="Yodsanon Duangkhai"
                   fill
                   sizes="(min-width: 1024px) 44vw, (min-width: 768px) 460px, 360px"
-                  className="object-contain object-bottom drop-shadow-[0_10px_20px_rgba(0,0,0,0.16)]"
+                  className="object-contain object-bottom "
                   priority
                 />
               </div>
