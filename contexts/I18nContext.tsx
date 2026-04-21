@@ -45,8 +45,8 @@ const messages: Record<Locale, Dictionary> = {
     hero: {
       name: "ยศนนท์ ดวงไข",
       intro:
-        "สวัสดีครับ ผมชื่อยศนนท์ ดวงไข เป็นนักพัฒนาเว็บที่ชอบสร้างประสบการณ์ดิจิทัลที่ทันสมัย ลื่นไหล และใส่ใจรายละเอียด",
-      cta: "เริ่มต้นกันเลย",
+        "สวัสดีครับ ผมนายยศนนท์ ดวงไข นักศึกษาชั้นปีที่ 4 สาขาวิชาวิทยาการคอมพิวเตอร์ วิทยาลัยการคอมพิวเตอร์ มหาวิทยาลัยขอนแก่น ผมมีความชอบในการพัฒนาเว็บไซต์แบบ Full-Stack และสนุกกับการนำเทคโนโลยีใหม่ๆมาปรับใช้ครับ",
+      cta: "ดูผลงาน",
     },
     skills: {
       label: "ทักษะของผม",
@@ -74,8 +74,8 @@ const messages: Record<Locale, Dictionary> = {
     hero: {
       name: "Yodsanon Duangkhai",
       intro:
-        "Hello, my name is Yodsanon Duangkhai. I build modern, interactive, and beautifully crafted web experiences.",
-      cta: "Let's get started",
+        "Hi, I'm Yotsanon Duangkai, a 4th-year Computer Science student at the College of Computing, Khon Kaen University. I'm passionate about Full-Stack web development and always enjoy bringing new technologies into my projects.",
+      cta: "View My Work",
     },
     skills: {
       label: "My Arsenal",
