@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { cookies, headers } from "next/headers";
 import { IBM_Plex_Mono, IBM_Plex_Sans_Thai } from "next/font/google";
 import { I18nProvider } from "@/contexts/I18nContext";
 import "./globals.css";
@@ -15,20 +16,38 @@ const ibmPlexSansThai = IBM_Plex_Sans_Thai({
   variable: "--font-thai",
 });
 
+const STORAGE_KEY = "portfolio_locale";
+
+type Locale = "th" | "en";
+
+async function getInitialLocale(): Promise<Locale> {
+  const storedLocale = (await cookies()).get(STORAGE_KEY)?.value;
+
+  if (storedLocale === "th" || storedLocale === "en") {
+    return storedLocale;
+  }
+
+  const acceptLanguage = (await headers()).get("accept-language")?.toLowerCase() ?? "";
+
+  return acceptLanguage.startsWith("th") ? "th" : "en";
+}
+
 export const metadata: Metadata = {
   title: "YodsanonDK",
   description: "YodsanonDK's personal website",
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const initialLocale = await getInitialLocale();
+
   return (
-    <html lang="en" className={`${ibmPlexMono.variable} ${ibmPlexSansThai.variable} h-full antialiased scroll-smooth`}>
-      <body className={`min-h-full flex flex-col font-sans ${ibmPlexMono.className}`}>
-        <I18nProvider>{children}</I18nProvider>
+    <html lang={initialLocale} className={`${ibmPlexMono.variable} ${ibmPlexSansThai.variable} h-full antialiased scroll-smooth`}>
+      <body className="min-h-full flex flex-col font-sans">
+        <I18nProvider initialLocale={initialLocale}>{children}</I18nProvider>
       </body>
     </html>
   );

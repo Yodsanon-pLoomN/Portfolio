@@ -10,7 +10,7 @@ export default function Hero() {
 
   return (
     <section id="top" className="min-h-screen flex items-center justify-center pt-24 pb-12 overflow-hidden relative">
-      <div className="container mx-auto px-6">
+      <div className="container mx-auto px-6 lg:pl-48">
         <div className="flex flex-col-reverse lg:flex-row items-center justify-center gap-10 lg:gap-2">
           
           {/* Text Content */}
@@ -49,6 +49,7 @@ export default function Hero() {
                   src={profilepic}
                   alt="Yodsanon Duangkhai"
                   fill
+                  sizes="(min-width: 1024px) 44vw, (min-width: 768px) 460px, 360px"
                   className="object-contain object-bottom drop-shadow-[0_10px_20px_rgba(0,0,0,0.16)]"
                   priority
                 />

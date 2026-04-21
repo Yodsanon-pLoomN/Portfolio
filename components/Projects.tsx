@@ -2,39 +2,7 @@
 
 import Link from 'next/link';
 import { useI18n } from "@/contexts/I18nContext";
-
-const projects = [
-  {
-    id: 1,
-    title: { en: "E-Commerce Platform", th: "แพลตฟอร์มอีคอมเมิร์ซ" },
-    desc: { en: "A full-stack shopping experience.", th: "ประสบการณ์ชอปปิงแบบ Full-stack" },
-  },
-  {
-    id: 2,
-    title: { en: "Finance Dashboard", th: "แดชบอร์ดการเงิน" },
-    desc: { en: "Real-time analytics and tracking.", th: "วิเคราะห์และติดตามข้อมูลแบบเรียลไทม์" },
-  },
-  {
-    id: 3,
-    title: { en: "Portfolio Concept", th: "คอนเซปต์พอร์ตโฟลิโอ" },
-    desc: { en: "Interactive modern web design.", th: "งานออกแบบเว็บโมเดิร์นแบบอินเทอร์แอคทีฟ" },
-  },
-  {
-    id: 4,
-    title: { en: "Task Management App", th: "แอปจัดการงาน" },
-    desc: { en: "Productivity tool with drag and drop.", th: "เครื่องมือเพิ่มประสิทธิภาพพร้อมระบบลากและวาง" },
-  },
-  {
-    id: 5,
-    title: { en: "Social Media Clone", th: "โซเชียลมีเดียโคลน" },
-    desc: { en: "Connecting people worldwide.", th: "เชื่อมต่อผู้คนทั่วโลก" },
-  },
-  {
-    id: 6,
-    title: { en: "AI Image Generator", th: "เครื่องมือสร้างภาพด้วย AI" },
-    desc: { en: "Harnessing the power of AI.", th: "ยกระดับการสร้างสรรค์ด้วยพลังของ AI" },
-  },
-];
+import { projects } from "@/data/projects";
 
 export default function Projects() {
   const { locale, t } = useI18n();

@@ -1,18 +1,9 @@
 "use client";
 
 import Image from "next/image";
-import TailwindCSS from '../public/TailwindCSS.svg';
-import Figma from '../public/Figma.svg';
-import next from '../public/Next.js.svg';
-import MySQL from '../public/MySQL.svg';
 import { useI18n } from "@/contexts/I18nContext";
+import { techStack } from "@/data/tools";
 
-const techStack = [
-  { name: "Next.js", icon: next },
-  { name: "Tailwind CSS", icon: TailwindCSS },
-  { name: "MySQL", icon: MySQL },
-  { name: "Figma", icon: Figma },
-];
 
 export default function Skills() {
   const { t } = useI18n();

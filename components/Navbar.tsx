@@ -2,6 +2,7 @@
 import Image from 'next/image';
 import linkedin from '../public/LinkedIn.svg';
 import instragram from '../public/instagram.svg';
+import github from '../public/Github.svg';
 import Logo from '../public/globe.svg';
 import { useState } from 'react';
 import Link from 'next/link';
@@ -56,11 +57,14 @@ export default function Navbar() {
           </div>
 
           <div className="hidden sm:flex items-center gap-4">
-            <a href='https://www.linkedin.com/in/loom-pl-173a8a314/' target="_blank" rel="noopener noreferrer" className="hover:-translate-y-1 hover:scale-110 transition-all duration-300">
-              <Image src={linkedin} alt="LinkedIn" width={18} height={18} />
+            <a href='https://www.linkedin.com/in/loom-pl-173a8a314/' target="_blank" rel="noopener noreferrer" className="hover:-translate-y-1 hover:scale-110 transition-all duration-300 opacity-75">
+              <Image src={linkedin} alt="LinkedIn" width={22} height={22} />
             </a>
             <a href='https://www.instagram.com/yod_non/' target="_blank" rel="noopener noreferrer" className="hover:-translate-y-1 hover:scale-110 transition-all duration-300">
               <Image src={instragram} alt="Instagram" width={22} height={22} />
+            </a>
+             <a href='https://github.com/Yodsanon-pLoomN' target="_blank" rel="noopener noreferrer" className="hover:-translate-y-1 hover:scale-110 transition-all duration-300">
+              <Image src={github} alt="GitHub" width={22} height={22} />
             </a>
           </div>
 

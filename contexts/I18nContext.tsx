@@ -60,7 +60,7 @@ const messages: Record<Locale, Dictionary> = {
     },
     footer: {
       rights: "สงวนลิขสิทธิ์",
-      builtWith: "ออกแบบด้วยใจและพัฒนาด้วย Next.js",
+      builtWith: "ขอขอบคุณที่เข้าชมเว็บไซต์ของผม",
     },
   },
   en: {
@@ -89,7 +89,7 @@ const messages: Record<Locale, Dictionary> = {
     },
     footer: {
       rights: "All rights reserved.",
-      builtWith: "Designed with passion and built with Next.js",
+      builtWith: "Thanks for visiting my portfolio",
     },
   },
 };
@@ -118,12 +118,19 @@ function getInitialLocale(): Locale {
   return browserLang.startsWith("th") ? "th" : "en";
 }
 
-export function I18nProvider({ children }: { children: React.ReactNode }) {
-  const [locale, setLocale] = useState<Locale>(getInitialLocale);
+export function I18nProvider({
+  children,
+  initialLocale,
+}: {
+  children: React.ReactNode;
+  initialLocale: Locale;
+}) {
+  const [locale, setLocale] = useState<Locale>(() => initialLocale ?? getInitialLocale());
 
   useEffect(() => {
     window.localStorage.setItem(STORAGE_KEY, locale);
     document.documentElement.lang = locale;
+    document.cookie = `${STORAGE_KEY}=${locale}; path=/; max-age=31536000; samesite=lax`;
   }, [locale]);
 
   const value = useMemo(
