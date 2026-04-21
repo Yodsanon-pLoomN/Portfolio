@@ -24,11 +24,11 @@ export default function Navbar() {
             height={30}
             className="group-hover:rotate-12 transition-transform duration-300"
           />
-          <span className="text-[#111111] font-bold tracking-wider opacity-0 group-hover:opacity-100 transition-opacity duration-300 hidden sm:block">YODSANON DUANGKHAI</span>
+          <span className="text-[#111111] font-bold tracking-wider opacity-0 group-hover:opacity-100 transition-opacity duration-300 hidden lg:block">YODSANON DUANGKHAI</span>
         </Link>
 
         {/* Desktop Menu */}
-        <ul className="hidden md:flex items-center gap-10 text-[#4b5563] text-sm font-medium">
+        <ul className="hidden md:flex items-center gap-6 lg:gap-10 text-[#4b5563] text-xs lg:text-sm font-medium">
           <li><Link href="#top" scroll={true} className="hover:text-[#111111] transition-colors duration-200">{t.nav.home}</Link></li>
           <li><Link href="#skills" scroll={true} className="hover:text-[#111111] transition-colors duration-200">{t.nav.skills}</Link></li>
           <li><Link href="#projects" scroll={true} className="hover:text-[#111111] transition-colors duration-200">{t.nav.work}</Link></li>
@@ -36,7 +36,7 @@ export default function Navbar() {
         </ul>
 
         {/* Social media & Toggle */}
-        <div className="flex items-center gap-6">
+        <div className="flex items-center gap-3 lg:gap-6">
           <div className="hidden sm:flex items-center gap-2 rounded-md border border-black/15 p-1 text-xs">
             <button
               type="button"
@@ -56,7 +56,7 @@ export default function Navbar() {
             </button>
           </div>
 
-          <div className="hidden sm:flex items-center gap-4">
+          <div className="hidden lg:flex items-center gap-4">
             <a href='https://www.linkedin.com/in/loom-pl-173a8a314/' target="_blank" rel="noopener noreferrer" className="hover:-translate-y-1 hover:scale-110 transition-all duration-300 opacity-75">
               <Image src={linkedin} alt="LinkedIn" width={22} height={22} />
             </a>
