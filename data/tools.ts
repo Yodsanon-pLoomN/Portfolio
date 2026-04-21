@@ -13,15 +13,17 @@ import github from '../public/Github.svg';
 
 export const techStack = [
   { name: "Next.js", icon: next ,type: "framework"},
-  { name: "Tailwind CSS", icon: TailwindCSS ,type: "css"},
-  { name: "MySQL", icon: MySQL ,type: "database"},
-  { name: "Figma", icon: Figma ,type: "design"},
-  { name: "Node.js", icon: NodeJS ,type: "runtime"},
   { name: "Express.js", icon: ExpressJS ,type: "framework"},
-  { name: "Prisma", icon: Prisma ,type: "orm"},
-  { name: "PostgreSQL", icon: PostgreSQL ,type: "database"},
-  { name: "Docker", icon: Docker ,type: "containerization"},
+  { name: "Node.js", icon: NodeJS ,type: "runtime"},
   { name: "React / React Native", icon: ReactIcon ,type: "library"},
   { name: "Ionic", icon: Ionic ,type: "framework"},
+  { name: "Tailwind CSS", icon: TailwindCSS ,type: "css"},
+  { name: "Firebase", icon: "https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg" ,type: "library"},
+  { name: "Prisma", icon: Prisma ,type: "orm"},
+  { name: "PostgreSQL", icon: PostgreSQL ,type: "database"},
+  { name: "MySQL", icon: MySQL ,type: "database"},
+  { name: "Docker", icon: Docker ,type: "containerization"},
+  { name: "Figma", icon: Figma ,type: "design"},
   { name: "GitHub", icon: github ,type: "version-control"},
+  
 ];

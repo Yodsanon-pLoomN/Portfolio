@@ -66,7 +66,7 @@ export default function ProjectDetailPage({ params }: Props) {
                   {locale === "th" ? "โปรเจกต์" : "Project"} 0{item.id}
                 </p>
                 <h1 className="text-3xl md:text-5xl font-bold text-[#111111] mb-3">{item.title[locale]}</h1>
-                <p className="text-lg text-[#374151]">{item.subtitle[locale]}</p>
+                <p className="text-lg text-[#374151]">{item.desc[locale]}</p>
               </div>
               
               <div className="md:text-right shrink-0">
@@ -84,7 +84,7 @@ export default function ProjectDetailPage({ params }: Props) {
               <h2 className="text-xl font-semibold text-[#111111] mb-3">
                 {locale === "th" ? "ภาพรวมโปรเจกต์" : "Project Overview"}
               </h2>
-              <p className="text-[#4b5563] leading-relaxed text-base">{item.overview[locale]}</p>
+              <p className="text-[#4b5563] leading-relaxed text-base whitespace-pre-line">{item.overview[locale]}</p>
             </div>
 
             {/* Tech Stack Section */}
