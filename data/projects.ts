@@ -1,4 +1,4 @@
-import { time } from "console";
+
 
 export type LocalizedText = {
   th: string;
@@ -33,6 +33,11 @@ export const projects: Project[] = [
       "/assets/project1/4.png",
       "/assets/project1/5.png",
       "/assets/project1/6.png",
+      "/assets/project1/7.png",
+      "/assets/project1/8.png",
+      "/assets/project1/9.png",
+      "/assets/project1/10.png",
+      "/assets/project1/11.png",
     ],
   },
   {
@@ -85,12 +90,12 @@ export const projects: Project[] = [
     timeline: "Year 2 Sem 1",
     stack: ["Next.js", "PostgreSQL", "PrismaORM","Uploadthing","TailwindCSS"],
     images: [
-      "/assets/project1/1.png",
-      "/assets/project1/2.png",
-      "/assets/project1/3.png",
-      "/assets/project1/4.png",
-      "/assets/project1/5.png",
-      "/assets/project1/6.png",
+      "/assets/project3/1.png",
+      "/assets/project3/2.png",
+      "/assets/project3/3.png",
+      "/assets/project3/4.png",
+      "/assets/project3/5.png",
+      "/assets/project3/6.png",
     ],
   },
   {
