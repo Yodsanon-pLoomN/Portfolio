@@ -19,7 +19,7 @@ export default function Education() {
   }[locale];
 
   return (
-    <section id="education" className="py-24 bg-white">
+    <section id="education" className="bg-white">
       <div className="container mx-auto px-6">
         <div className="flex flex-col items-center mb-14">
           <span className="text-black uppercase tracking-[0.2em] text-sm font-semibold mb-2">{text.label}</span>

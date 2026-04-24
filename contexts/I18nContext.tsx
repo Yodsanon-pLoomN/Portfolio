@@ -25,6 +25,8 @@ type Dictionary = {
     label: string;
     title: string;
     viewProject: string;
+    viewGithub: string;
+    viewMoreOnGithub: string;
     itemPrefix: string;
   };
   footer: {
@@ -50,12 +52,14 @@ const messages: Record<Locale, Dictionary> = {
     },
     skills: {
       label: "ทักษะของผม",
-      title: "เทคโนโลยีที่ใช้งาน",
+      title: "เทคโนโลยีที่เคยใช้งาน",
     },
     projects: {
       label: "ผลงาน",
       title: "งานล่าสุด",
       viewProject: "ดูโปรเจกต์",
+      viewGithub: "ไปยัง GitHub",
+      viewMoreOnGithub: "ดูผลงานอื่นๆ ได้ที่ GitHub",
       itemPrefix: "โปรเจกต์",
     },
     footer: {
@@ -85,6 +89,8 @@ const messages: Record<Locale, Dictionary> = {
       label: "Portfolio",
       title: "Recent Work",
       viewProject: "View Project",
+      viewGithub: "View on GitHub",
+      viewMoreOnGithub: "View more projects on GitHub",
       itemPrefix: "Project",
     },
     footer: {

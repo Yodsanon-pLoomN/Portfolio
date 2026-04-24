@@ -9,7 +9,7 @@ export default function Hero() {
   const { locale, t } = useI18n();
 
   return (
-    <section id="top" className="min-h-screen flex items-center justify-center pt-24 pb-12 overflow-hidden relative">
+    <section id="top" className="min-h-screen flex items-center justify-center pt-6 pb-6 overflow-hidden relative">
       <div className="container mx-auto px-6 lg:pl-48">
         <div className="flex flex-col-reverse lg:flex-row items-center justify-center gap-10 lg:gap-2">
           

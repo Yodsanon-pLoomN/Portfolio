@@ -9,7 +9,7 @@ export default function Skills() {
   const { t } = useI18n();
 
   return (
-    <section id="skills" className="py-24 relative z-10">
+    <section id="skills" className="py-12 relative z-10">
       <div className="container mx-auto px-6">
         <div className="flex flex-col items-center mb-16">
           <span className="text-black uppercase tracking-[0.2em] text-sm font-semibold mb-2">{t.skills.label}</span>
