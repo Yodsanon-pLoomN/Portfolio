@@ -2,8 +2,9 @@
 
 import { useI18n } from "@/contexts/I18nContext";
 
+
 export default function Contact() {
-  const { locale } = useI18n();
+  const { locale ,t } = useI18n();
 
   const content = {
   th: {
@@ -57,7 +58,7 @@ export default function Contact() {
                 <a
                   className="text-sm md:text-base font-medium text-[#111111]"
                 >
-                  นายยศนนท์ ดวงไข
+                  {t.hero.name}
                 </a>
               </div>
 
