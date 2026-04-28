@@ -3,6 +3,7 @@ import { cookies, headers } from "next/headers";
 import { IBM_Plex_Mono, IBM_Plex_Sans_Thai } from "next/font/google";
 import { I18nProvider } from "@/contexts/I18nContext";
 import "./globals.css";
+import { Analytics } from "@vercel/analytics/next"
 
 const ibmPlexMono = IBM_Plex_Mono({
   weight: ["400", "500", "600", "700"],
@@ -48,6 +49,7 @@ export default async function RootLayout({
     <html lang={initialLocale} className={`${ibmPlexMono.variable} ${ibmPlexSansThai.variable} h-full antialiased scroll-smooth`}>
       <body className="min-h-full flex flex-col font-sans">
         <I18nProvider initialLocale={initialLocale}>{children}</I18nProvider>
+        <Analytics />
       </body>
     </html>
   );
