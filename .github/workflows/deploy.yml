@@ -76,4 +76,4 @@ jobs:
             cd ~/apps/${{ env.APP_NAME }}
             tar -xzf deploy.tar.gz
             rm -f deploy.tar.gz
-            sudo /home/${{ secrets.SSH_USER }}/bin/deploy-app.sh ${{ env.APP_NAME }} ${{ env.APP_PORT }}
+            sudo ~/bin/deploy-app.sh ${{ env.APP_NAME }} ${{ env.APP_PORT }}
